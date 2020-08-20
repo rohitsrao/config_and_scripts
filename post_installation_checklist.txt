@@ -1,0 +1,15 @@
+Post Installation Checklist
+
+1 - Go To Software & Updates -> Updates
+	Change 'When there are security updates' and 'When there are other updates'
+	to display immediately.
+	
+2 - Software & Updates -> Ubuntu Software
+	Change the mirror to a local mirror. 
+	
+3 - Software & Updates -> Other Software
+	Check Canonical Partners as some third party softwares can come through that
+	
+4 - Check for additional drivers
+
+Close and reload so that it refreshes cache
