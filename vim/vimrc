@@ -1,6 +1,11 @@
 " Display Hybrid  Line Numbers
 set number relativenumber
 
+"Open new vertical split windows on the right
+"Open new split windows below
+set splitright
+set splitbelow
+
 " Start of vim-plug Manager
 call plug#begin()
 	Plug 'vim-scripts/AutoClose'
