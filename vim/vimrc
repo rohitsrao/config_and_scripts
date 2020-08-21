@@ -4,6 +4,7 @@ set number relativenumber
 " Start of vim-plug Manager
 call plug#begin()
 	Plug 'vim-scripts/AutoClose'
+	Plug 'tpope/vim-fugitive'
 	Plug 'yggdroot/indentline'
 	Plug 'scrooloose/nerdtree'
 	Plug 'tmhedberg/simpylfold'
