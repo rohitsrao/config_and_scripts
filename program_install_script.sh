@@ -12,7 +12,7 @@ sudo apt-get update
 sudo apt-get upgrade
 
 #Installing  applications
-sudo apt install -yy build-essential curl vim git timeshift vlc tracker htop net-tools texlive-latex-extra texmaker gnome-tweaks owncloud-client locate nodejs npm youtube-dl
+sudo apt install -yy build-essential curl vim git timeshift vlc tracker htop net-tools texlive-latex-extra texmaker gnome-tweaks owncloud-client locate nodejs npm youtube-dl tldr
 
 sudo snap mp3gain
 
