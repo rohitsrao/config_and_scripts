@@ -12,9 +12,15 @@ sudo apt-get update
 sudo apt-get upgrade
 
 #Installing  applications
-sudo apt install -yy build-essential curl vim git timeshift vlc tracker htop net-tools texlive-latex-extra texmaker gnome-tweaks owncloud-client locate nodejs npm youtube-dl tldr nnn
+sudo apt install -yy build-essential curl vim git timeshift vlc tracker htop net-tools texlive-latex-extra texmaker gnome-tweaks locate nodejs npm youtube-dl tldr nnn
 
 sudo snap mp3gain
+
+#Installing sciebo client
+sudo wget -nv https://www.sciebo.de/install/linux/Ubuntu_20.04/Release.key -O - | sudo apt-key add -
+echo 'deb https://www.sciebo.de/install/linux/Ubuntu_20.04/ /' | sudo tee -a /etc/apt/sources.list.d/owncloud.list
+sudo apt update
+sudo apt install sciebo-client
 
 #Setting git parameters
 git config --global user.email "rohitsrao@gmail.com"
