@@ -75,3 +75,6 @@ let @q = 'CBCCP'
 
 " Setting Conceal Level to 0 so that math equations appear as LaTeX commands
 set conceallevel=0
+
+" Set spellcheck only for tex files
+autocmd FileType tex setlocal spell
