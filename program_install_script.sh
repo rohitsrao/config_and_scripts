@@ -36,6 +36,13 @@ sudo mkdir /home/$USER/.vim/autoload
 sudo curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+#Installing vim-latex
+wget https://sourceforge.net/projects/vim-latex/files/releases/vim-latex-1.10.0.tar.gz
+tar -xvf vim-latex-1.10.0.tar.gz
+mv vim-latex-1.10.0 vim-latex
+sudo mv ./vim-latex/ ~/.vim/
+rm vim-latex-1.10.0.tar.gz
+
 #Installing brave browser
 curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
 echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
