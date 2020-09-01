@@ -49,15 +49,15 @@ set encoding=utf-8
 "set spell spelllang=en_gb
 
 " ----------- Settings for vim-LaTeX ----------- 
-"
+
 " Invoke Latex-Suite when a tex file is opened 
-"filetype plugin on
-"
+filetype plugin on
+
 " Automatic Indentation
-"filetype indent on
-"
-" ----------- END of vim-Latex setting ----------- 
-"
+filetype indent on
+
+" ----------- Latex settings ----------- 
+
 " AutoCompile and Preview LaTeX in Vim
 " C compiles tex files
 " B compiles bibtex files
@@ -65,13 +65,13 @@ set encoding=utf-8
 " All mappings are in normal mode and must be executed from the main tex file
 " for bibliography
 " Idea sourced from https://www.youtube.com/watch?v=igX_QbCS5bg
-"
-"map C :! pdflatex %<CR><CR>
-"map B :! bibtex %:t:r<CR><CR>
-"map P :! mupdf $(echo % \| sed 's/tex$/pdf/') & disown<CR><CR>
+
+map C :! pdflatex %<CR><CR>
+map B :! bibtex %:t:r<CR><CR>
+map P :! mupdf $(echo % \| sed 's/tex$/pdf/') & disown<CR><CR>
 
 " Defining a recording with sequence CBCCP
-"let @q = 'CBCCP'
-"
+let @q = 'CBCCP'
+
 " Setting Conceal Level to 0 so that math equations appear as LaTeX commands
-"set conceallevel=0
+set conceallevel=0
