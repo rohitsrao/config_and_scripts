@@ -12,7 +12,7 @@ sudo apt-get update
 sudo apt-get upgrade
 
 #Installing  applications
-sudo apt install -yy build-essential curl vim git timeshift vlc tracker htop net-tools texlive-latex-extra texmaker gnome-tweaks locate nodejs npm youtube-dl libreoffice-writer libreoffice-calc
+sudo apt install -yy build-essential curl vim git timeshift vlc tracker htop net-tools texlive-latex-extra texlive-lang-german texmaker gnome-tweaks locate nodejs npm youtube-dl libreoffice-writer libreoffice-calc
 
 sudo snap mp3gain
 
