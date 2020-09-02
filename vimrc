@@ -45,9 +45,6 @@ call plug#end()
 " NERDTree Settings
 nmap <C-f> :NERDTreeToggle<CR>
 
-" Spellcheck settings
-"set spell spelllang=en_gb
-
 " ----------- Settings for vim-LaTeX ----------- 
 
 " Invoke Latex-Suite when a tex file is opened 
