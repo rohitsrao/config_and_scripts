@@ -39,6 +39,7 @@ call plug#begin()
 	Plug 'yggdroot/indentline'		"Indentation line for Python
 	Plug 'scrooloose/nerdtree'		"File browser
 	Plug 'tmhedberg/simpylfold'		"Code folding
+	Plug 'sirver/ultisnips'                 "Code Snippets
 	Plug 'lervag/vimtex'			"LaTeX filetype plugin
 call plug#end()
 " End of vim-plug Managaer
