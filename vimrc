@@ -47,8 +47,13 @@ call plug#end()
 " NERDTree Settings
 nmap <C-f> :NERDTreeToggle<CR>
 
+"ultisnips settings
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+
 "vimtex settings
-let g:tex_flavour='latex'
+let g:tex_flavor='latex'
 let g:vimtex_view_method='zathura'
 let g:vimtex_quickfix_mode=0
 set conceallevel=1
