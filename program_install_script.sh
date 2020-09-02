@@ -29,6 +29,9 @@ sudo apt install sciebo-client
 git config --global user.email "rohitsrao@gmail.com"
 git config --global user.name "Rohit"
 git config --global core.editor "vim"
+git config --global diff.tool vimdiff
+git config --global merg.tool vimdiff
+git config --global difftool.prompt false
 
 #Installing vim plug
 #Making directory .vim and autoload inside it
