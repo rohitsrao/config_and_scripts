@@ -15,7 +15,7 @@ sudo apt-get upgrade
 sudo apt install -yy build-essential curl vim git timeshift tracker htop net-tools gnome-tweaks locate nodejs npm 
 sudo apt install -yy texlive-latex-extra texlive-lang-german texlive-science texmaker 
 sudo apt install -yy youtube-dl vlc
-sudo apt install -yy libreoffice-writer libreoffice-calc inkscape
+sudo apt install -yy libreoffice-writer libreoffice-calc inkscape mupdf
 
 sudo snap mp3gain
 
