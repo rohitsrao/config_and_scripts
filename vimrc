@@ -34,11 +34,11 @@ map <C-l> <C-w>l
 
 " Start of vim-plug Manager
 call plug#begin()
-	Plug 'vim-scripts/AutoClose'
-	Plug 'tpope/vim-fugitive'
-	Plug 'yggdroot/indentline'
-	Plug 'scrooloose/nerdtree'
-	Plug 'tmhedberg/simpylfold'
+	Plug 'vim-scripts/AutoClose'		"Autoclose paranthesis and quotations
+	Plug 'tpope/vim-fugitive'		"Git controls from within vim
+	Plug 'yggdroot/indentline'		"Indentation line for Python
+	Plug 'scrooloose/nerdtree'		"File browser
+	Plug 'tmhedberg/simpylfold'		"Code folding
 call plug#end()
 " End of vim-plug Managaer
 
