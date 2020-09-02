@@ -6,15 +6,11 @@ set number relativenumber
 set splitright
 set splitbelow
 
-" Start of vim-plug Manager
-call plug#begin()
-	Plug 'vim-scripts/AutoClose'
-	Plug 'tpope/vim-fugitive'
-	Plug 'yggdroot/indentline'
-	Plug 'scrooloose/nerdtree'
-	Plug 'tmhedberg/simpylfold'
-call plug#end()
-" End of vim-plug Managaer
+" Disable Parenthesis Matching
+set noshowmatch
+
+" UTF-8 Support
+set encoding=utf-8
 
 " ----------- Key Mappings ---------
 
@@ -36,14 +32,18 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" Start of vim-plug Manager
+call plug#begin()
+	Plug 'vim-scripts/AutoClose'
+	Plug 'tpope/vim-fugitive'
+	Plug 'yggdroot/indentline'
+	Plug 'scrooloose/nerdtree'
+	Plug 'tmhedberg/simpylfold'
+call plug#end()
+" End of vim-plug Managaer
+
 " NERDTree Settings
 nmap <C-f> :NERDTreeToggle<CR>
-
-" Disable Parenthesis Matching
-set noshowmatch
-
-" UTF-8 Support
-set encoding=utf-8
 
 " Spellcheck settings
 "set spell spelllang=en_gb
