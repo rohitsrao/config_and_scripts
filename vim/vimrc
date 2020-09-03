@@ -6,6 +6,11 @@ set number relativenumber
 set splitright
 set splitbelow
 
+"Do not create backup and swap files
+set nobackup
+set nowritebackup
+set noswapfile
+
 " Disable Parenthesis Matching
 set noshowmatch
 
