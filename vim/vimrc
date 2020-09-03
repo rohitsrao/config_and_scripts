@@ -22,7 +22,7 @@ set nocompatible
 
 "Set spell check on for file types
 autocmd FileType tex setlocal spell
-autocmd FileType txt setlocal spell
+autocmd FileType text setlocal spell
 
 " ----------- Key Mappings ---------
 
