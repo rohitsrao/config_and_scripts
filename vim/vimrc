@@ -15,6 +15,9 @@ set encoding=utf-8
 "Compatible should not be set so that UltiSnips can work
 set nocompatible
 
+"Set spell check on for file types
+autocmd FileType tex setlocal spell
+
 " ----------- Key Mappings ---------
 
 " Disabling Arrow Keys in Normal Mode
