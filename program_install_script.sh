@@ -20,12 +20,6 @@ sudo apt install -yy xdotool
 
 sudo snap install mp3gain
 
-#Installing sciebo client
-sudo wget -nv https://www.sciebo.de/install/linux/Ubuntu_20.04/Release.key -O - | sudo apt-key add -
-echo 'deb https://www.sciebo.de/install/linux/Ubuntu_20.04/ /' | sudo tee -a /etc/apt/sources.list.d/owncloud.list
-sudo apt update
-sudo apt install sciebo-client
-
 #Setting git parameters
 git config --global user.email "rohitsrao@gmail.com"
 git config --global user.name "Rohit"
@@ -45,6 +39,12 @@ sudo curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 #Copy vimrc
 cp ./vim/vimrc ~/.vimrc
+
+#Installing sciebo client
+sudo wget -nv https://www.sciebo.de/install/linux/Ubuntu_20.04/Release.key -O - | sudo apt-key add -
+echo 'deb https://www.sciebo.de/install/linux/Ubuntu_20.04/ /' | sudo tee -a /etc/apt/sources.list.d/owncloud.list
+sudo apt update
+sudo apt install sciebo-client
 
 #Installing brave browser
 curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
