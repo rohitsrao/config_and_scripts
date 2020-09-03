@@ -18,7 +18,7 @@ sudo apt install -yy youtube-dl vlc
 sudo apt install -yy libreoffice-writer libreoffice-calc inkscape zathura
 sudo apt install -yy xdotool 
 
-sudo snap mp3gain
+sudo snap install mp3gain
 
 #Installing sciebo client
 sudo wget -nv https://www.sciebo.de/install/linux/Ubuntu_20.04/Release.key -O - | sudo apt-key add -
