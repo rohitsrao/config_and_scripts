@@ -12,7 +12,7 @@ sudo apt-get update
 sudo apt-get upgrade
 
 #Installing  applications
-sudo apt install -yy build-essential curl vim git timeshift tracker htop net-tools gnome-tweaks locate nodejs npm 
+sudo apt install -yy build-essential curl vim git timeshift tracker htop net-tools gnome-tweaks locate nodejs npm calc
 sudo apt install -yy texlive-latex-extra texlive-lang-german texlive-science texmaker latexmk 
 sudo apt install -yy youtube-dl vlc
 sudo apt install -yy libreoffice-writer libreoffice-calc inkscape zathura

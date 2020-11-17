@@ -24,6 +24,10 @@ set nocompatible
 autocmd FileType tex setlocal spell
 autocmd FileType text setlocal spell
 
+"Set tab width to 4 spaces
+set tabstop=4
+set shiftwidth=4
+
 " ----------- Key Mappings ---------
 
 " Disabling Arrow Keys in Normal Mode
