@@ -17,6 +17,7 @@ sudo apt install -yy texlive-latex-extra texlive-lang-german texlive-science tex
 sudo apt install -yy youtube-dl vlc
 sudo apt install -yy libreoffice-writer libreoffice-calc inkscape zathura
 sudo apt install -yy xdotool 
+sudo apt install -yy julia
 
 sudo snap install mp3gain
 
