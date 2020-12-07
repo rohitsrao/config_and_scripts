@@ -19,7 +19,7 @@ sudo apt install -yy libreoffice-writer libreoffice-calc inkscape zathura
 sudo apt install -yy xdotool 
 sudo apt install -yy julia
 
-sudo snap install mp3gain
+sudo snap install mp3gain pick-colour-picker
 
 #Setting git parameters
 git config --global user.email "rohitsrao@gmail.com"
