@@ -1,0 +1,35 @@
+snippet h "Heading Tag" b
+<h$1>$2</h$1>
+endsnippet
+
+snippet link "Simple HTML Link" b
+<a href="$1">$0</a>
+endsnippet
+
+snippet p "Paragraph Tag" b
+<p>
+$1
+</p>
+endsnippet
+
+snippet start "Define the HTML Doctype and basic template" b
+<!DOCTYPE html>
+<html>
+	<head>
+			<meta http-equiv="refresh" content="0.5">
+	</head>
+
+	<body>
+	</body>
+</html>
+endsnippet
+
+snippet t "A simple HTML tag" b
+<${1}>
+	$2
+</${1/(\w+).*/$1/}>
+endsnippet
+
+snippet title "Title Tag"
+<title>$1</title>
+endsnippet
