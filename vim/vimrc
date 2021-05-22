@@ -50,13 +50,14 @@ map <C-l> <C-w>l
 
 " Start of vim-plug Manager
 call plug#begin()
-	Plug 'vim-scripts/AutoClose'		"Autoclose paranthesis and quotations
+	Plug 'vim-scripts/AutoClose'	"Autoclose paranthesis and quotations
 	Plug 'tpope/vim-fugitive'		"Git controls from within vim
 	Plug 'yggdroot/indentline'		"Indentation line for Python
 	Plug 'scrooloose/nerdtree'		"File browser
+	Plug 'SirVer/ultisnips'			"Ultisnips Snippets
 	Plug 'tmhedberg/simpylfold'		"Code folding
-	Plug 'sirver/ultisnips'                 "Code Snippets
 	Plug 'lervag/vimtex'			"LaTeX filetype plugin
+	Plug 'tomlion/vim-solidity'     "Syntax files for Solidity
 call plug#end()
 " End of vim-plug Managaer
 
@@ -64,9 +65,11 @@ call plug#end()
 nmap <C-f> :NERDTreeToggle<CR>
 
 "ultisnips settings
-let g:UltiSnipsExpandTrigger = '<tab>'
-let g:UltiSnipsJumpForwardTrigger = '<tab>'
-let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsSnippetDirectories=['~/.vim/UltiSnips', 'UltiSnips']
+let g:UltiSnipsEditSplit="vertical"
 
 "vimtex settings
 let g:tex_flavor='latex'
