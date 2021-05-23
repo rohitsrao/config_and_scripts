@@ -1,3 +1,9 @@
+" Skip pretending to be vi
+set nocompatible
+
+" enable syntax
+syntax enable
+
 " Display Hybrid  Line Numbers
 set number relativenumber
 
@@ -16,7 +22,11 @@ set noshowmatch
 
 " UTF-8 Support
 set encoding=utf-8
-"
+
+"Search down into subfolders
+"Provides tab-completion for all file-related tasks
+set path+=**
+
 "Compatible should not be set so that UltiSnips can work
 set nocompatible
 
