@@ -8,5 +8,5 @@ sudo cp ~/.vimrc ./vim/vimrc
 echo ".vimrc successfully copied to ./vim/vimrc"
 
 #Copy UltiSnips directory
-sudo cp -a UltiSnips/ ~/Documents/config_and_scripts/vim/UltiSnips/
+sudo cp -a ~/.vim/UltiSnips/ ~/Documents/config_and_scripts/vim/
 echo "UltiSnips Directory copied"
