@@ -1,5 +1,5 @@
-snippet endl "standard endline command"
-std::endl
+snippet #inc "the include command for headers"
+#include <$1>
 endsnippet
 
 snippet cin "standard cin command"
@@ -10,6 +10,43 @@ snippet cout "standard cout command"
 std::cout << 
 endsnippet
 
-snippet #inc "the include command for headers"
-#include <$1>
+snippet endl "standard endline command"
+<< std::endl
+endsnippet
+
+snippet for "for loop"
+for(int $1; $2; $3)
+{
+	$4
+}
+endsnippet
+
+snippet if "if code block"
+if($1)
+{
+	$2
+}
+endsnippet	
+
+snippet ifstream "expand to standard namespace"
+std::ifstream $1 ($2)
+endsnippet
+
+snippet ofstream "expand to standard namespace"
+std::ofstream $1 ($2)
+endsnippet
+
+snippet str "standard name space string" i
+std::string $1
+endsnippet
+
+snippet while "while loop"
+while($1)
+{
+	$2
+}
+endsnippet	
+
+snippet vec "vector definition"
+std::vector<$1>
 endsnippet
