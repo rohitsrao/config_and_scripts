@@ -20,9 +20,6 @@ set noswapfile
 "Disable Parenthesis Matching
 set noshowmatch
 
-"UTF-8 Support
-set encoding=utf-8
-
 "Code Folding
 set foldmethod=manual
 autocmd BufWinLeave *.* mkview
@@ -44,7 +41,6 @@ command! MakeTags !ctags -R
 
 "Set spell check on for file types
 autocmd FileType tex setlocal spell
-autocmd FileType text setlocal spell
 
 "Set tab width to 4 spaces
 set tabstop=4
