@@ -39,9 +39,6 @@ set wildmenu
 " - Use ^t to jump back up the tag stack
 command! MakeTags !ctags -R
 
-"Set spell check on for file types
-autocmd FileType tex setlocal spell
-
 "Set tab width to 4 spaces
 set tabstop=4
 set shiftwidth=4
