@@ -9,6 +9,11 @@ snippet com "Single Line Comment"
 <!-- $1 -->
 endsnippet
 
+snippet div "content division element"
+<div class="$1">
+</div>
+endsnippet
+
 snippet h "Heading Tag" b
 <h$1>$2</h$1>
 endsnippet
@@ -22,6 +27,7 @@ snippet html "Define the HTML Doctype and basic template" b
 <html>
 	<head>	
 		<meta charset="utf-8">
+		<meta http-equiv="refresh" content="5">
 		<title>$1</title>
 	</head>
 
@@ -40,6 +46,10 @@ endsnippet
 
 snippet link "link tag"
 <link rel="$1" href="$2">
+endsnippet
+
+snippet meta "Meta tag"
+<meta $1>
 endsnippet
 
 snippet p "Paragraph Tag" b
