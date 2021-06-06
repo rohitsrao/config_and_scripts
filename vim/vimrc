@@ -2,7 +2,7 @@
 set nocompatible
 
 "Enable syntax
-syntax enable
+syntax on
 
 "Display Hybrid  Line Numbers
 set number relativenumber
@@ -38,10 +38,6 @@ set wildmenu
 " - Use g^] for ambiguous tags
 " - Use ^t to jump back up the tag stack
 command! MakeTags !ctags -R
-
-"Set tab width to 4 spaces
-set tabstop=4
-set shiftwidth=4
 
 " ----------- Key Mappings ---------
 
