@@ -1,23 +1,39 @@
 snippet * "Reset or global level"
 *{
-	$1
+  $1
 }
 endsnippet
 
-snippet b "Generate a code block "
-$1{
-	$2
+snippet . "create code block for a class"
+.$1{
+  $2
 }
+endsnippet
+
+snippet # "create code block for id"
+#$1{
+  $2
+}
+endsnippet
+
+snippet com "inser block comment"
+/* $1 */
 endsnippet
 
 snippet m "Create code block for media query" b
 @media($1){
-	$2
+  $2
 }
 endsnippet
  
 snippet r "Root Scope"
 :root {
-	$1
+  $1
+}
+endsnippet
+
+snippet t "Generate a code block "
+$1{
+  $2
 }
 endsnippet

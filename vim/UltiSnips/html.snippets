@@ -12,16 +12,19 @@ endsnippet
 
 snippet div "content division element"
 <div>
+  $2
 </div>
 endsnippet
 
 snippet div.c "content division element"
 <div class="$1">
+  $2
 </div>
 endsnippet
 
 snippet div.i "content division element"
 <div id="$1">
+  $2
 </div>
 endsnippet
 
@@ -53,7 +56,7 @@ snippet img "Image Tag" b
 endsnippet
 
 snippet input "input tag" b
-<input type="$1" name="$2" value="$3">
+<input type="$1" name="$2" id="$3">
 endsnippet
 
 snippet link "link tag"
@@ -68,23 +71,27 @@ snippet p "Paragraph Tag" b
 <p$1>$2</p>
 endsnippet
 
+snippet stag "A simple HTML tag inline" i
+<$1>
+endsnippet
+
 snippet tag "A simple HTML tag inline" i
 <${1}>$2</${1/(\w+).*/$1/}>
 endsnippet
 
 snippet table "basic table boilercode"
 <table>
-	<thead>
-		$1
-	</thead>
-
-	<tbody>
-		$2
-	</tbody>
-
-	<tfoot>
-		$3
-	</tfoot>
+  <thead>
+    $1
+  </thead>
+  
+  <tbody>
+    $2
+  </tbody>
+  
+  <tfoot>
+    $3
+  </tfoot>
 </table>
 endsnippet	
 
