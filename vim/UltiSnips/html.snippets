@@ -40,11 +40,13 @@ snippet html "Define the HTML Doctype and basic template" b
 <!DOCTYPE html>
 <html>
   <head>	
-    <link rel="stylesheet" href="css/style.css">
+    <title>$1</title>
+    
     <meta charset="utf-8">
     <meta http-equiv="refresh" content="5">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$1</title>
+    
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
@@ -53,7 +55,7 @@ snippet html "Define the HTML Doctype and basic template" b
 endsnippet
 
 snippet img "Image Tag" b
-<img src="$1" alt="$2">
+<img class= "$1" src="$2" alt="$3">
 endsnippet
 
 snippet input "input tag" b
@@ -70,6 +72,10 @@ endsnippet
 
 snippet p "Paragraph Tag" b
 <p$1>$2</p>
+endsnippet
+
+snippet script "Script Tag" b
+<script src="$1" type="text/javascript"></script>
 endsnippet
 
 snippet stag "A simple HTML tag inline" i
