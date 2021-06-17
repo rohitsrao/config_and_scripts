@@ -11,6 +11,10 @@ echo ".vimrc successfully copied to ./vim/vimrc"
 sudo cp -avr ~/.vim/UltiSnips/ ~/Documents/config_and_scripts/vim/
 echo "UltiSnips Directory copied successfully"
 
+#Copy colors directory
+sudo cp -avr ~/.vim/colors/ ~/Documents/config_and_scripts/vim/
+echo "colors directory copied successfully"
+
 #Execute git status command
 echo ""
 echo "Running git status"

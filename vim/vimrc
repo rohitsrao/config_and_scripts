@@ -1,8 +1,11 @@
 "Skip pretending to be vi
 set nocompatible
 
-"Enable syntax
+"Enable syntax and solarized colorscheme
 syntax on
+set t_Co=256
+colorscheme minimalist
+
 
 "Display Hybrid  Line Numbers
 set number relativenumber
@@ -42,7 +45,7 @@ command! MakeTags !ctags -R
 " Filetype based indenting
 autocmd Filetype css setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab indentexpr=""
 autocmd Filetype html setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab indentexpr=""
-autocmd Filetype javascript setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab indentexpr=""
+autocmd Filetype javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab indentexpr=""
 
 " ----------- Key Mappings ---------
 
@@ -78,6 +81,9 @@ call plug#end()
 
 " NERDTree Settings
 nmap <C-f> :NERDTreeToggle<CR>
+" enable line numbers and relative numbers in NERDTree
+let NERDTreeShowLineNumbers=1
+autocmd Filetype nerdtree setlocal relativenumber
 
 "ultisnips settings
 let g:UltiSnipsExpandTrigger="<tab>"
