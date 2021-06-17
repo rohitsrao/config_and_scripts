@@ -6,7 +6,6 @@ syntax on
 set t_Co=256
 colorscheme minimalist
 
-
 "Display Hybrid  Line Numbers
 set number relativenumber
 
@@ -42,11 +41,6 @@ set wildmenu
 " - Use ^t to jump back up the tag stack
 command! MakeTags !ctags -R
 
-" Filetype based indenting
-autocmd Filetype css setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab indentexpr=""
-autocmd Filetype html setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab indentexpr=""
-autocmd Filetype javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab indentexpr=""
-
 " ----------- Key Mappings ---------
 
 " Disabling Arrow Keys in Normal Mode
@@ -74,8 +68,8 @@ call plug#begin()
 	Plug 'yggdroot/indentline'		"Indentation line for Python
 	Plug 'scrooloose/nerdtree'		"File browser
 	Plug 'SirVer/ultisnips'			"Ultisnips Snippets
+	Plug 'sheerun/vim-polyglot'
 	"Plug 'lervag/vimtex'			"LaTeX filetype plugin
-	"Plug 'tomlion/vim-solidity'     "Syntax files for Solidity
 call plug#end()
 " End of vim-plug Managaer
 
