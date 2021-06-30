@@ -14,6 +14,21 @@ function $1($2){
 }
 endsnippet
 
+snippet if "if condition"
+if ($1) {
+  $2
+}
+endsnippet
+
+snippet ife "if else condition"
+if ($1) {
+  $2
+}
+else{
+  $3
+}
+endsnippet
+
 snippet req "expands to code for requiring packages" b
-const $1 = require('$2');
+const $1 = require("$2");
 endsnippet

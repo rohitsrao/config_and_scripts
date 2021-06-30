@@ -86,6 +86,9 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsSnippetDirectories=['~/.vim/UltiSnips', 'UltiSnips']
 let g:UltiSnipsEditSplit="vertical"
 
+"vim-polyglot settings
+let g:python_highlight_space_errors=0
+
 "vimtex settings
 let g:tex_flavor='latex'
 let g:vimtex_view_method='zathura'
