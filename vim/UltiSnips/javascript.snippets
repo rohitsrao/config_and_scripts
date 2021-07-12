@@ -1,3 +1,13 @@
+snippet < "Creating a React Component"
+<$1 />
+endsnippet
+
+snippet af "arrow annonymous function"
+() => {
+  $1
+}
+endsnippet
+
 snippet callb "callback function" i
 function ($1) {
   $2
@@ -30,5 +40,9 @@ else{
 endsnippet
 
 snippet req "expands to code for requiring packages" b
-const $1 = require("$2");
+const $1 = require('$2');
+endsnippet
+
+snippet tag "A simple HTML tag inline" i
+<${1}>$2</${1/(\w+).*/$1/}>
 endsnippet

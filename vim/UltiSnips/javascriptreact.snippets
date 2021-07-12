@@ -1,0 +1,30 @@
+snippet < "Single Line custom tag"
+<$1 />
+endsnippet
+
+snippet clog "console log"
+console.log($1);
+endsnippet
+
+snippet ife "if else condition"
+if ($1) {
+  $2
+}
+else{
+  $3
+}
+endsnippet
+
+snippet func "Javascript function"
+function $1($2){
+  $3
+}
+endsnippet
+
+snippet react "import react"
+import React from "react";
+endsnippet
+
+snippet tag "A simple HTML tag inline" i
+<${1}>$2</${1/(\w+).*/$1/}>
+endsnippet
