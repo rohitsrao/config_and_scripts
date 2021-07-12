@@ -2,7 +2,7 @@
 set nocompatible
 
 "Enable syntax and solarized colorscheme
-syntax on
+syntax enable
 set t_Co=256
 colorscheme minimalist
 
@@ -64,10 +64,9 @@ map <C-l> <C-w>l
 " Start of vim-plug Manager
 call plug#begin()
 	Plug 'vim-scripts/AutoClose'	"Autoclose paranthesis and quotations
-	Plug 'tpope/vim-fugitive'		"Git controls from within vim
-	Plug 'yggdroot/indentline'		"Indentation line for Python
 	Plug 'scrooloose/nerdtree'		"File browser
 	Plug 'SirVer/ultisnips'			"Ultisnips Snippets
+	Plug 'thaerkh/vim-indentguides' "Indent Guide Lines
 	Plug 'sheerun/vim-polyglot'
 	"Plug 'lervag/vimtex'			"LaTeX filetype plugin
 call plug#end()
