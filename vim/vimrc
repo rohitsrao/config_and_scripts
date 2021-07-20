@@ -89,6 +89,11 @@ let g:UltiSnipsEditSplit="vertical"
 let g:python_highlight_space_errors=0
 let g:dart_style_guide=1
 
+"vim-indentguides settings
+let g:indentguides_spacechar='|'
+let g:indentguides_tabchar='|'
+set nolist "Disable the dots for spaces
+
 "vimtex settings
 "let g:tex_flavor='latex'
 "let g:vimtex_view_method='zathura'
