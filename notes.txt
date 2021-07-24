@@ -1,0 +1,4 @@
+On installing thaerkh/vim-indentguides, we find that there are dots being inserted
+for spaces in the text along with | for tab/space. 
+To fix this in vim-indentguides/plugin/indentguides.vim 
+change all "setlocal list" to "setlocal nolist"
