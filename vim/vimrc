@@ -92,7 +92,6 @@ let g:dart_style_guide=1
 "vim-indentguides settings
 let g:indentguides_spacechar='|'
 let g:indentguides_tabchar='|'
-set nolist "Disable the dots for spaces
 
 "vimtex settings
 "let g:tex_flavor='latex'
