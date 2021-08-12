@@ -68,7 +68,10 @@ call plug#begin()
 	Plug 'SirVer/ultisnips'			"Ultisnips Snippets
 	Plug 'thaerkh/vim-indentguides' "Indent Guide Lines
 	Plug 'sheerun/vim-polyglot'
+	"Plug 'vim-test/vim-test' "Testing within vim
 	"Plug 'lervag/vimtex'			"LaTeX filetype plugin
+	"Plug 'tpope/vim-surround' "Matching Paranthesis and Tags
+	"Plug 'alfredodeza/coveragepy.vim' "Coverage
 call plug#end()
 " End of vim-plug Managaer
 
