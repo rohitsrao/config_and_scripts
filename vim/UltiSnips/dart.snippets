@@ -1,3 +1,10 @@
+snippet column "Create column widget"
+Column(
+	children: <Widget>[
+	]
+),
+endsnippet	
+
 snippet func "void main"
 $1 $2($3) {
 	$4
@@ -21,6 +28,28 @@ endsnippet
 snippet imp "import statement"
 import '$1';
 endsnippet
+
+snippet row "Create row widget"
+Row(
+	children: <Widget>[
+	]
+),
+endsnippet	
+
+snippet stateful "create stateful widget"
+class $1 extends StatefulWidget {
+	@override
+	_$1State createState() => _$1State();
+}
+
+class _$1State extends State<$1>{
+	@override
+	Widget build(BuildContext context) {
+		return (
+		);
+	}
+}
+endsnippet	
 
 snippet stateless "create stateless widget"
 class $1 extends StatelessWidget {
