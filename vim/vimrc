@@ -68,7 +68,9 @@ call plug#begin()
 	Plug 'SirVer/ultisnips'			"Ultisnips Snippets
 	Plug 'thaerkh/vim-indentguides' "Indent Guide Lines
 	Plug 'sheerun/vim-polyglot'
-	"Plug 'vim-test/vim-test' "Testing within vim
+	Plug 'vim-test/vim-test' "Testing within vim
+	Plug 'vim-airline/vim-airline' "Vim Airline Status Bar
+	Plug 'vim-airline/vim-airline-themes' 
 	"Plug 'lervag/vimtex'			"LaTeX filetype plugin
 	"Plug 'tpope/vim-surround' "Matching Paranthesis and Tags
 	"Plug 'alfredodeza/coveragepy.vim' "Coverage
@@ -95,6 +97,21 @@ let g:dart_style_guide=1
 "vim-indentguides settings
 let g:indentguides_spacechar='|'
 let g:indentguides_tabchar='|'
+
+"vim-test settings
+let test#python#runner = 'pytest'
+let test#dart#runner = 'fluttertest'
+nmap <silent> tF :TestFile<CR>
+nmap <silent> tN :TestNearest<CR>
+nmap <silent> tL :TestLast<CR>
+nmap <silent> tS :TestSuite<CR>
+nmap <silent> tVF :TestFile --verbose<CR>
+nmap <silent> tVN :TestNearest --verbose<CR>
+nmap <silent> tVL :TestLast --verbose<CR>
+nmap <silent> tVS :TestSuite<CR>
+
+"
+let g:airline_theme='minimalist'
 
 "vimtex settings
 "let g:tex_flavor='latex'
