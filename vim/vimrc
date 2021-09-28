@@ -63,14 +63,15 @@ map <C-l> <C-w>l
 
 " Start of vim-plug Manager
 call plug#begin()
-	Plug 'vim-scripts/AutoClose'	"Autoclose paranthesis and quotations
-	Plug 'scrooloose/nerdtree'		"File browser
-	Plug 'SirVer/ultisnips'			"Ultisnips Snippets
-	Plug 'thaerkh/vim-indentguides' "Indent Guide Lines
-	Plug 'sheerun/vim-polyglot'
-	Plug 'vim-test/vim-test' "Testing within vim
-	Plug 'vim-airline/vim-airline' "Vim Airline Status Bar
-	Plug 'vim-airline/vim-airline-themes' 
+	Plug 'vim-scripts/AutoClose'					"Autoclose paranthesis and quotations
+	Plug 'scrooloose/nerdtree'						"File browser
+	Plug 'SirVer/ultisnips'			    			"Ultisnips Snippets
+	Plug 'thaerkh/vim-indentguides' 			"Indent Guide Lines
+	Plug 'tpope/vim-fugitive'       			"Vim Plugin for Git
+	Plug 'sheerun/vim-polyglot'     			"Language Syntax
+	Plug 'vim-test/vim-test' 							"Testing within vim
+	Plug 'vim-airline/vim-airline' 				"Vim Airline Status Bar
+	Plug 'vim-airline/vim-airline-themes' "Vim Airline Theme
 	"Plug 'lervag/vimtex'			"LaTeX filetype plugin
 	"Plug 'tpope/vim-surround' "Matching Paranthesis and Tags
 	"Plug 'alfredodeza/coveragepy.vim' "Coverage
@@ -110,8 +111,12 @@ nmap <silent> tVN :TestNearest --verbose<CR>
 nmap <silent> tVL :TestLast --verbose<CR>
 nmap <silent> tVS :TestSuite<CR>
 
-"
+" vim-airline settings
 let g:airline_theme='minimalist'
+let g:airline_powerline_fonts = 1
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+let g:airline_section_b = '%{FugitiveStatusline()}'
 
 "vimtex settings
 "let g:tex_flavor='latex'

@@ -1,9 +1,31 @@
+snippet actions "actions attribute"
+actions: <Widget>[
+	$1
+]
+endsnippet	
+
 snippet column "Create column widget"
 Column(
 	children: <Widget>[
 	]
 ),
 endsnippet	
+
+snippet didchangedependencies "didChangeDependencies metho"
+@override
+void didChangeDependencies() {
+	$1
+	super.didChangeDependencies();
+}
+endsnippet	
+
+snippet dispose "dispose method"
+@override
+void dispose() {
+	$1
+	super.dispose();
+}
+endsnippet
 
 snippet func "void main"
 $1 $2($3) {
@@ -27,6 +49,14 @@ endsnippet
 
 snippet imp "import statement"
 import '$1';
+endsnippet
+
+snippet initstate "initState method"
+@override
+void initState() {
+	$1
+	super.initState();
+}
 endsnippet
 
 snippet material "import material.dart"
