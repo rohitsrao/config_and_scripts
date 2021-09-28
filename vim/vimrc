@@ -116,7 +116,8 @@ let g:airline_theme='minimalist'
 let g:airline_powerline_fonts = 1
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
-let g:airline_section_b = '%{FugitiveStatusline()}'
+let g:airline_section_b = '%-10.0{FugitiveStatusline()}'
+let g:airline#extensions#whitespace#enabled = 0
 
 "vimtex settings
 "let g:tex_flavor='latex'
