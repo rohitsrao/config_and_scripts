@@ -18,6 +18,12 @@ snippet clog "console log"
 console.log($1)
 endsnippet
 
+snippet frag "fragment"
+<>
+  $1
+</>
+endsnippet
+
 snippet func "Javascript function"
 function $1($2){
   $3
@@ -37,6 +43,16 @@ if ($1) {
 else{
   $3
 }
+endsnippet
+
+snippet imp "import statement"
+import $1 from '$2';
+endsnippet
+
+snippet << "multiline react component tag"
+<$1>
+  $2
+</${1/(\w+).*/$1/}>
 endsnippet
 
 snippet req "expands to code for requiring packages" b
