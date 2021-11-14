@@ -72,6 +72,7 @@ call plug#begin()
 	Plug 'vim-test/vim-test' 							"Testing within vim
 	Plug 'vim-airline/vim-airline' 				"Vim Airline Status Bar
 	Plug 'vim-airline/vim-airline-themes' "Vim Airline Theme
+	Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 	"Plug 'lervag/vimtex'			"LaTeX filetype plugin
 	"Plug 'tpope/vim-surround' "Matching Paranthesis and Tags
 	"Plug 'alfredodeza/coveragepy.vim' "Coverage
