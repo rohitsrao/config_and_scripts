@@ -61,6 +61,12 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" Custom Mapping for split window resizing
+noremap <silent> <C-Up> :resize +1<CR>
+noremap <silent> <C-Down> :resize -1<CR>
+noremap <silent> <C-Right> :vertical resize +1<CR>
+noremap <silent> <C-Left> :vertical resize -1<CR>
+
 " Start of vim-plug Manager
 call plug#begin()
 	Plug 'vim-scripts/AutoClose'					"Autoclose paranthesis and quotations
@@ -73,6 +79,9 @@ call plug#begin()
 	Plug 'vim-airline/vim-airline' 				"Vim Airline Status Bar
 	Plug 'vim-airline/vim-airline-themes' "Vim Airline Theme
 	Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+	Plug 'thosakwe/vim-flutter' 					"Hot Reload on Save in Flutter
+	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+	Plug 'junegunn/fzf.vim' 							"Fuzzy File Search Vim
 	"Plug 'lervag/vimtex'			"LaTeX filetype plugin
 	"Plug 'tpope/vim-surround' "Matching Paranthesis and Tags
 	"Plug 'alfredodeza/coveragepy.vim' "Coverage
@@ -103,6 +112,7 @@ let g:indentguides_tabchar='|'
 "vim-test settings
 let test#python#runner = 'pytest'
 let test#dart#runner = 'fluttertest'
+let test#dart#fluttertest#options = '-r expanded -d 192.168.0.115:5555'
 nmap <silent> tF :TestFile<CR>
 nmap <silent> tN :TestNearest<CR>
 nmap <silent> tL :TestLast<CR>
@@ -119,6 +129,17 @@ let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 let g:airline_section_b = '%{FugitiveStatusline()}'
 let g:airline#extensions#whitespace#enabled = 0
+
+" vim-flutter settings
+nmap <silent> fD :FlutterDevices<CR>
+nmap <silent> fR :FlutterRun<CR>
+nmap <silent> fH :FlutterHotRestart<CR>
+nmap <silent> fQ :FlutterQuit<CR>
+
+" fzf settings
+nnoremap <silent> <C-d> :Files<CR>
+nnoremap <silent> <C-g> :GFiles<CR>
+nnoremap <silent> <C-p> :Rg! 
 
 "vimtex settings
 "let g:tex_flavor='latex'
