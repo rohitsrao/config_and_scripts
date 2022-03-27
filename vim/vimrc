@@ -82,22 +82,23 @@ call plug#begin()
 	Plug 'thosakwe/vim-flutter' 					"Hot Reload on Save in Flutter
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 	Plug 'junegunn/fzf.vim' 							"Fuzzy File Search Vim
+	Plug 'neoclide/coc.nvim', {'branch': 'release'} "Code Completion
+	"Plug 'ervandew/supertab'							"SuperTab to use YouCompleteMe with UltiSnip
+	"Plug 'Valloric/YouCompleteMe'					"Code Completion
 	"Plug 'lervag/vimtex'			"LaTeX filetype plugin
 	"Plug 'tpope/vim-surround' "Matching Paranthesis and Tags
-	"Plug 'alfredodeza/coveragepy.vim' "Coverage
 call plug#end()
 " End of vim-plug Managaer
 
 " NERDTree Settings
 nmap <C-f> :NERDTreeToggle<CR>
-" enable line numbers and relative numbers in NERDTree
 let NERDTreeShowLineNumbers=1
 autocmd Filetype nerdtree setlocal relativenumber
 
 "ultisnips settings
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsJumpBackwardTrigger="<c-s-tab>"
 let g:UltiSnipsSnippetDirectories=['~/.vim/UltiSnips', 'UltiSnips']
 let g:UltiSnipsEditSplit="vertical"
 
@@ -111,16 +112,18 @@ let g:indentguides_tabchar='|'
 
 "vim-test settings
 let test#python#runner = 'pytest'
+let test#python#pytest#executable = 'RUN_ENV=TEST pytest'
 let test#dart#runner = 'fluttertest'
 let test#dart#fluttertest#options = '-r expanded -d 192.168.0.115:5555'
+let test#javascript#runner = 'jest'
+let test#project_root = 'server'
+let test#javascript#jest#executable = 'NODE_ENV=test $(yarn bin)/jest'
+let test#javascript#jest#options = '--runInBand'
+"let test#javascript#jest#options = '--runInBand --detectOpenHandles --forceExit'
 nmap <silent> tF :TestFile<CR>
 nmap <silent> tN :TestNearest<CR>
 nmap <silent> tL :TestLast<CR>
 nmap <silent> tS :TestSuite<CR>
-nmap <silent> tVF :TestFile --verbose<CR>
-nmap <silent> tVN :TestNearest --verbose<CR>
-nmap <silent> tVL :TestLast --verbose<CR>
-nmap <silent> tVS :TestSuite<CR>
 
 " vim-airline settings
 let g:airline_theme='minimalist'
@@ -140,6 +143,38 @@ nmap <silent> fQ :FlutterQuit<CR>
 nnoremap <silent> <C-d> :Files<CR>
 nnoremap <silent> <C-g> :GFiles<CR>
 nnoremap <silent> <C-p> :Rg! 
+
+" coc settings - start
+
+" tab to cycle
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+nnoremap <silent> K :call <SID>show_documentation()<CR> 
+
+" coc settings - end
+
+" functions
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
+" make YCM compatible with UltiSnips (using supertab)
+"let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+"let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+"let g:SuperTabDefaultCompletionType = '<C-n>'
 
 "vimtex settings
 "let g:tex_flavor='latex'
