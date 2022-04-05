@@ -1,8 +1,67 @@
+global !p
+def convertToLowercase(text):
+    return text.lower()
+endglobal
+
 snippet actions "actions attribute"
 actions: <Widget>[
 	$1
 ]
 endsnippet	
+
+snippet blocbuilder "bloc builder"
+BlocBuilder<$1Bloc, $1State>(
+	builder: (context, state) {
+	}
+),
+endsnippet
+
+snippet blocinit "boiler plate for _bloc.dart"
+import 'dart:async';
+
+import 'package:equatable/equatable.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+part '`!p snip.rv = convertToLowercase(t[1])`_event.dart';
+part '`!p snip.rv = convertToLowercase(t[1])`_state.dart';
+
+class $1Bloc extends Bloc<$1Event, $1State> {
+
+	$1Bloc() : super();
+}
+endsnippet
+
+snippet bloceventinit "boiler plate for _event.dart"
+part of '`!p snip.rv = convertToLowercase(t[1])`_bloc.dart';
+
+abstract class $1Event extends Equatable {
+	const $1Event();
+
+  @override
+  List<Object?> get props => [];
+}
+endsnippet
+
+snippet blocprovider "boiler plate for bloc provider"
+BlocProvider<$1>(create: (context) => $1()),
+endsnippet
+
+snippet blocstateinit "boiler plate for _state.dart"
+part of '`!p snip.rv = convertToLowercase(t[1])`_bloc.dart';
+
+abstract class $1State extends Equatable {
+	const $1State();
+
+  @override
+  List<Object?> get props => [];
+}
+endsnippet
+
+snippet class "boiler plate for class"
+class $1 {
+
+}
+endsnippet
 
 snippet column "Create column widget"
 Column(
@@ -14,8 +73,8 @@ endsnippet
 snippet didchangedependencies "didChangeDependencies metho"
 @override
 void didChangeDependencies() {
-	$1
 	super.didChangeDependencies();
+	$1
 }
 endsnippet	
 
@@ -24,26 +83,6 @@ snippet dispose "dispose method"
 void dispose() {
 	$1
 	super.dispose();
-}
-endsnippet
-
-snippet func "void main"
-$1 $2($3) {
-	$4
-}
-endsnippet
-
-snippet if "if condition"
-if ($1) {
-	$2
-}
-endsnippet
-
-snippet ife "if else condition"
-if ($1) {
-	$2
-} else {
-	$3
 }
 endsnippet
 
@@ -59,15 +98,9 @@ void initState() {
 }
 endsnippet
 
-snippet material "import material.dart"
-import 'package:flutter/material.dart';
-endsnippet
-
-snippet padding "Padding widget"
-Padding(
-	padding: $1,
-	child: $2,
-),
+snippet propsgetter "overriding props getter for class extending Equatable"
+@override
+List<Object?> get props => [$1];
 endsnippet
 
 snippet row "Create row widget"
@@ -86,18 +119,32 @@ class $1 extends StatefulWidget {
 class _$1State extends State<$1>{
 	@override
 	Widget build(BuildContext context) {
-		return (
-		);
+		return $2;
 	}
 }
 endsnippet	
 
 snippet stateless "create stateless widget"
 class $1 extends StatelessWidget {
+	
+	const $1({Key? key}) : super(key: key);
+	
 	@override
 	Widget build(BuildContext context){
-		return (
-		);
+		return ;
 	}
 }
 endsnippet	
+
+snippet tc "try catch block"
+try {
+	$1
+}
+catch (_) {}
+endsnippet
+
+snippet testwidget "testWidgets method"
+testWidgets('$1', (WidgetTester tester) async {
+	await tester.pumpWidget($2);
+});
+endsnippet

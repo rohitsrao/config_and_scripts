@@ -2,47 +2,23 @@ snippet < "Creating a React Component"
 <$1 />
 endsnippet
 
-snippet af "arrow annonymous function"
-() => {
-  $1
-}
-endsnippet
-
-snippet callb "callback function" i
-function ($1) {
-  $2
-}
+snippet atest "creates asynchronous test function"
+test('$1', async () => {
+});
 endsnippet
 
 snippet clog "console log"
 console.log($1)
 endsnippet
 
+snippet describe "adds describe block"
+describe('$1', () => {
+});
+endsnippet
+
 snippet frag "fragment"
 <>
-  $1
 </>
-endsnippet
-
-snippet func "Javascript function"
-function $1($2){
-  $3
-}
-endsnippet
-
-snippet if "if condition"
-if ($1) {
-  $2
-}
-endsnippet
-
-snippet ife "if else condition"
-if ($1) {
-  $2
-}
-else{
-  $3
-}
 endsnippet
 
 snippet imp "import statement"
@@ -51,14 +27,43 @@ endsnippet
 
 snippet << "multiline react component tag"
 <$1>
-  $2
 </${1/(\w+).*/$1/}>
+endsnippet
+
+snippet rc "boilerplate for react component"
+import React from 'react';
+
+//Components
+
+//Styles
+import { Wrapper } from './${1/(\w)/$1/}.styles';
+
+const $1 = ($2) => {
+  return(
+    <Wrapper>
+    </Wrapper>
+  );
+}
+
+export default ${1/(\w)/$1/};
 endsnippet
 
 snippet req "expands to code for requiring packages" b
 const $1 = require('$2');
 endsnippet
 
+snippet sc "boiler plate for styled component"
+import styled from 'styled-components';
+
+export const Wrapper = styled.div\`
+\`;
+endsnippet
+
 snippet tag "A simple HTML tag inline" i
 <${1}>$2</${1/(\w+).*/$1/}>
+endsnippet
+
+snippet test "adds synchronous test function"
+test('$1', () => {
+});
 endsnippet
